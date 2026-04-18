@@ -1,0 +1,94 @@
+:root {
+    --primary: #6366f1;
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f8fafc;
+    --success: #22c55e;
+    --danger: #ef4444;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+}
+
+aside {
+    width: 250px;
+    background: var(--card);
+    padding: 2rem;
+    border-right: 1px solid #334155;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, var(--primary), #a855f7);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+input, select, button {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    background: var(--card);
+    color: white;
+}
+
+button {
+    background: var(--primary);
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.visuals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.chart-container {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#transaction-list {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    background: var(--card);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.income { border-left: 4px solid var(--success); }
+.expense { border-left: 4px solid var(--danger); }
