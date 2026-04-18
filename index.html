@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzly | Panel de Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h2>Finanzly</h2>
+            <nav>
+                <ul>
+                    <li class="active">Resumen</li>
+                    <li>Transacciones</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <header>
+                <h1>Mi Presupuesto</h1>
+                <div class="balance-card">
+                    <p>Saldo Total</p>
+                    <h2 id="total-balance">$0.00</h2>
+                </div>
+            </header>
+
+            <section class="form-section">
+                <form id="transaction-form">
+                    <input type="text" id="desc" placeholder="Descripción (ej. Cena)" required>
+                    <input type="number" id="amount" placeholder="Monto" required>
+                    <select id="type">
+                        <option value="income">Ingreso</option>
+                        <option value="expense">Gasto</option>
+                    </select>
+                    <button type="submit">Agregar</button>
+                </form>
+            </section>
+
+            <section class="visuals">
+                <div class="chart-container">
+                    <canvas id="financeChart"></canvas>
+                </div>
+                <div class="history">
+                    <h3>Actividad Reciente</h3>
+                    <ul id="transaction-list"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
